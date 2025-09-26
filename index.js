@@ -27,7 +27,7 @@ class FuncQueue {
                  if (process.env.NODE_ENV != "production")
                 console.log('\x1b[41m%s\x1b[0m', 'result: ...', rst)
                 if(cb)
-                  cb({job: params, result: rst})
+                  cb({job: [...job], result: rst})
             }
 
         } else {
