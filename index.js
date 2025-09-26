@@ -17,7 +17,7 @@ class FuncQueue {
         return this.list
     }
 
-    async RunJobInQueue(fxn, params, delay_per_job_secs = 1) {
+    async RunJobInQueue(fxn, params, delay_per_job_secs = 1, cb=false) {
         if (this.List().length <= 0) {
             this.Enqueue(params)
             while (this.List().length > 0) {
@@ -26,6 +26,8 @@ class FuncQueue {
                 const rst = await fxn(...job)
                  if (process.env.NODE_ENV != "production")
                 console.log('\x1b[41m%s\x1b[0m', 'result: ...', rst)
+                if(cb)
+                  cb({job: params, result: rst})
             }
 
         } else {
