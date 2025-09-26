@@ -1,0 +1,33 @@
+{
+  "name": "emcode-func-queue",
+  "version": "1.0.0",
+  "description": "A lightweight function queue for Node.js to run tasks with controlled concurrency and timing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "lint": "eslint .",
+    "build": "tsc"
+  },
+  "keywords": [
+    "queue",
+    "function",
+    "task",
+    "async",
+    "concurrency",
+    "job",
+    "emcode"
+  ],
+  "author": "Emcode <emcodellc@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emcodest/emcode-func-queue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emcodest/emcode-func-queue/issues"
+  },
+  "homepage": "https://github.com/emcodest/emcode-func-queue#readme",
+  "engines": {
+    "node": ">=14"
+  }
+}
